@@ -13,12 +13,17 @@
                 <img src="assets\logo.jpg" alt="Logo">
                 <a href="#">A-Star-Streak</a>
             </div>
+           
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <div class="nav-links">
                 <a href="#">Subjects</a>
-
                 <a href="#">Past Papers</a>
                 <a href="#">Revision Notes</a>
-                <a href="#">Pricing</a></li>
+                <a href="#">Pricing</a>
                 <a href="#">About</a>
                 <a href="#" class="sign-in">Sign In</a>
             </div>
@@ -30,5 +35,12 @@
     <footer>
 
     </footer>
+    <script>
+        // small screen toggle
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-links');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

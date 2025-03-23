@@ -4,71 +4,150 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
 }
-button{
+
+button {
     cursor: pointer;
 }
-img{
+
+img {
     object-fit: cover;
 }
-h2{
+
+h2 {
     font-weight: 400;
 }
-nav{
+
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 32px;
     border: 2px solid #e8e8e8;
-    position: absolute;
+    position: fixed; /* Change from absolute to fixed */
     top: 16px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 16px;
     padding: 15px;
+    width: 90%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Make sure it sits on top of other content */
 }
-nav .logo{
+
+nav .logo {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-nav .logo img{
+nav .logo img {
     width: 35px;
     height: 35px;
 }
 
-nav .logo a{
+nav .logo a {
     color: #000;
     font-weight: 600;
 }
 
-nav .nav-links{
+nav .nav-links {
     display: flex;
     gap: 32px;
 }
 
-nav .nav-links a{
+nav .nav-links a {
     font-size: 14px;
     color: #000;
     transition: all 0.3s ease;
 }
 
-nav .nav-links a:hover{
+nav .nav-links a:hover {
     color: #606060;
 }
 
-/* Responsive Design */
-@media (min-width: 768px) {
-    .product {
-        width: 45%;
+nav .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+nav .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: unset;
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav .logo {
+        margin-bottom: 10px;
+    }
+
+    nav .nav-links {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        align-items: flex-start;
+        display: none;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    nav .nav-links a {
+        font-size: 16px;
+        padding: 8px;
+        width: 100%;
+        text-align: left;
+    }
+
+    nav .hamburger {
+        display: flex;
     }
 }
 
-@media (min-width: 1024px) {
-    .product {
-        width: 30%;
+@media screen and (max-width: 480px) {
+    nav .logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    nav .logo a {
+        font-size: 18px;
+    }
+
+    nav .nav-links a {
+        font-size: 16px;
+    }
+
+    main p {
+        font-size: 18px;
+        text-align: center;
+        margin: 20px;
+    }
+}
+
+/* Offset Main Content Below Navbar for Large Screens */
+@media screen and (min-width: 768px) {
+    main {
+        margin-top: 100px; /* Adjust the value to create space below the navbar */
     }
 }
