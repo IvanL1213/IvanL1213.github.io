@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 a {
@@ -19,6 +21,36 @@ img {
 
 h2 {
     font-weight: 400;
+}
+
+.title{
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.join-now-button{
+    text-align: center;
+}
+
+.join-now-button button{
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    justify-content: center; /* Centers horizontally */
+    text-align: center;
+    border-radius: 16px;  /* Rounded corners */
+    width: 150px;
+}
+
+.join-now-button button:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+    text-decoration: underline;  /* Indicate interactivity */
 }
 
 nav {
@@ -52,6 +84,7 @@ nav .logo img {
 nav .logo a {
     color: #000;
     font-weight: 600;
+    font-size: 25px;
 }
 
 nav .nav-links {
@@ -60,7 +93,7 @@ nav .nav-links {
 }
 
 nav .nav-links a {
-    font-size: 14px;
+    font-size: 18px;
     color: #000;
     transition: all 0.3s ease;
 }
