@@ -116,6 +116,42 @@ nav .hamburger .bar {
     transition: all 0.3s ease;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 12px;
+    padding: 7px;
+}
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: flex;
+}
+.dropdown:hover .dropdown-content {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    border-radius: 12px;
+}
+
 /* Media Queries for Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     nav {
