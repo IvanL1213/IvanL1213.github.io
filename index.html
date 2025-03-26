@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Star Streak</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
                 <a href="#"><img src="assets\logo.jpg" alt="Logo"></a>
                 <a href="#">AStarStreak</a>
-            </div>
-           
-            <div class="hamburger" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <div class="nav-links">
-                <div class="dropdown" >
-                    <a href="subjects.html" class="dropbtn">Subjects</a>
-                    <div class="dropdown-content">
-                        <a href="Edexcel-A-level-math.html">Math</a>
-                        <a href="AQA-A-level-physics.html">Physics</a>
-                        <a href="OCR-A-level-computer-science.html">Computer Science</a>
-                    </div>
-                    
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
                 </div>
+            </div>
+
+            <div class="nav-links">
+
+                <div class="dropdown-trigger">
+                    <a href="#subNav" id="subjects-button">Subjects ▾</a>
+                </div>
+
+
                 <a href="#">Past Papers</a>
                 <a href="#">Revision Notes</a>
                 <a href="#">Pricing</a>
@@ -38,8 +37,19 @@
         </nav>
     </header>
     <main>
-        <div class="title"><h1 >Getting A*s in A Levels by using this webiste is pretty much guaranteed!</h1></div>
+        <div class="title">
+            <h1>Getting A*s in A Levels by using this webiste is pretty much guaranteed!</h1>
+        </div>
         <div class="join-now-button"><button>Join now</button></div>
+
+        <br>
+        <div class="sub-nav-container" id="subNav">
+            <div class="sub-nav-links">
+                <a href="#cs">Computer Science</a>
+                <a href="#eng">English Language</a>
+                <a href="#pol">Politics</a>
+            </div>
+        </div>
     </main>
     <footer>
 
@@ -51,5 +61,23 @@
             menu.classList.toggle('active');
         }
     </script>
+    <script>
+        const subjectsButton = document.getElementById('subjects-button');
+        const subNav = document.getElementById('subNav');
+    
+        subjectsButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            subNav.style.display = (subNav.style.display === 'flex') ? 'none' : 'flex';
+        });
+    
+        // Optional: Close sub-nav when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!subjectsButton.contains(e.target) && !subNav.contains(e.target)) {
+                subNav.style.display = 'none';
+            }
+        });
+    </script>
+    
 </body>
+
 </html>
