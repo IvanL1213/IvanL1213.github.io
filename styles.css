@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    text-align: center;
 }
 
 a {
@@ -77,6 +78,7 @@ h2 {
     gap: 20px;
     padding: 20px;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 .feature-cards{
     background: white;
@@ -89,7 +91,18 @@ h2 {
     border: 1px solid #e8e8e8;
 }
 .feature-cards h4{
-    font-size: 22px;
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+.feature-cards small{
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.feature-cards hr{
+    margin-top: 18px
+}
+.feature-cards p{
+    text-align: left;
 }
 
 header{
@@ -243,6 +256,84 @@ nav .logo a {
     right: 0;
     max-width: 90vw;
 }
+/* Subject Card Container */
+.subject-container {
+    background: white;
+    width: 1319px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Subject Title */
+.subject-title {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+/* Exam Board Buttons */
+.exam-board-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.exam-board {
+    flex: 1;
+    background: #e0e0e0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.exam-board.active {
+    background: #007bff;
+    color: white;
+}
+
+/* Resource Cards */
+.resources {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    background: #eef4ff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styles */
+.icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
 /* Media Queries for Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     nav {
@@ -282,6 +373,7 @@ nav .logo a {
     nav .hamburger {
         display: flex;
     }
+    
 }
 
 @media screen and (max-width: 480px) {
