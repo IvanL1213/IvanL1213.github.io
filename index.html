@@ -129,110 +129,287 @@
         </div>
 
         <h2 style="font-size: 35px;"><b>A Level Subjects</b></h2>
+        
+        <!-- Physics-->
         <div class="subject-container" id="physics">
-            <h2 class="subject-title">Physics</h2>
-            <p>Choose your A Level Exam Board</p>
+            <h2 class="subject-title">
+                Physics
+                <button class="toggle-arrow" aria-label="Expand Subject">
+                    <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M6 9l6 6 6-6" stroke="black" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </h2>
             
-            <div class="exam-board-buttons">
-                <button class="exam-board active" data-board="aqa">AQA</button>
-                <button class="exam-board" data-board="edexcel">Edexcel</button>
-                <button class="exam-board" data-board="ocr">OCR</button>
-                <button class="exam-board" data-board="wjec">WJEC</button>
-                <button class="exam-board" data-board="eduqas">WJEC Eduqas</button>
-            </div>
-    
-            <div class="resources">
-                <div class="card" data-board="aqa">
-                    <div class="icon">📖</div>
-                    <h3>Revision Notes</h3>
-                </div>
-                <div class="card" data-board="aqa">
-                    <div class="icon">❓</div>
-                    <h3>Exam Questions</h3>
-                </div>
-                <div class="card" data-board="aqa">
-                    <div class="icon">🔄</div>
-                    <h3>Past Papers</h3>
-                </div>
-    
-                <div class="card" data-board="edexcel" style="display: none;">
-                    <div class="icon">📖</div>
-                    <h3>Revision Notes</h3>
-                </div>
-                <div class="card" data-board="edexcel" style="display: none;">
-                    <div class="icon">❓</div>
-                    <h3>Exam Questions</h3>
-                </div>
-                <div class="card" data-board="edexcel" style="display: none;">
-                    <div class="icon">🔄</div>
-                    <h3>Past Papers</h3>
-                </div>
+        
+            <div class="subject-content">
+                <p style="text-align: center;">Choose your A Level Exam Board</p>
                 
-                <div class="card" data-board="ocr" style="display: none;">
-                    <div class="icon">📖</div>
-                    <h3>Revision Notes</h3>
+                <div class="exam-board-buttons">
+                    <button class="exam-board active" data-board="aqa">AQA</button>
+                    <button class="exam-board" data-board="edexcel">Edexcel</button>
+                    <button class="exam-board" data-board="ocr">OCR</button>
+                    <!--<button class="exam-board" data-board="wjec">WJEC</button>
+                    <button class="exam-board" data-board="eduqas">WJEC Eduqas</button>-->
                 </div>
-                <div class="card" data-board="ocr" style="display: none;">
-                    <div class="icon">❓</div>
-                    <h3>Exam Questions</h3>
+        
+                <div class="resources">
+                    <!-- AQA Resources -->
+                    <a href="#" class="tool-card" data-board="aqa">
+                        <div class="icon">📖</div>
+                        <h3>Revision Notes</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="aqa">
+                        <div class="icon">❓</div>
+                        <h3>Exam Questions</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="aqa">
+                        <div class="icon">🔄</div>
+                        <h3>Past Papers</h3>
+                    </a>
+        
+                    <!-- Edexcel Resources -->
+                    <a href="#" class="tool-card" data-board="edexcel" style="display: none;">
+                        <div class="icon">📖</div>
+                        <h3>Revision Notes</h3>
+                        <small style="color: red;">[Coming soon]</small>
+                    </a>
+                    <a href="#" class="tool-card" data-board="edexcel" style="display: none;">
+                        <div class="icon">❓</div>
+                        <h3>Exam Questions</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="edexcel" style="display: none;">
+                        <div class="icon">🔄</div>
+                        <h3>Past Papers</h3>
+                    </a>
+        
+                    <!-- OCR Resources -->
+                    <a href="#" class="tool-card" data-board="ocr" style="display: none;">
+                        <div class="icon">📖</div>
+                        <h3>Revision Notes</h3>
+                        <small style="color: red;">[Coming soon]</small>
+                    </a>
+                    <a href="#" class="tool-card" data-board="ocr" style="display: none;">
+                        <div class="icon">❓</div>
+                        <h3>Exam Questions</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="ocr" style="display: none;">
+                        <div class="icon">🔄</div>
+                        <h3>Past Papers</h3>
+                    </a>
                 </div>
-                <div class="card" data-board="ocr" style="display: none;">
-                    <div class="icon">🔄</div>
-                    <h3>Past Papers</h3>
+            </div>
+        </div>
+        
+        <!--Maths-->
+        <div class="subject-container" id="maths">
+            <h2 class="subject-title">
+                Mathematics
+                <button class="toggle-arrow" aria-label="Expand Subject">
+                    <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M6 9l6 6 6-6" stroke="black" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </h2>
+            
+        
+            <div class="subject-content">
+                <p style="text-align: center;">Choose your A Level Exam Board</p>
+                
+                <div class="exam-board-buttons">
+                    <button class="exam-board active" data-board="aqa">AQA</button>
+                    <button class="exam-board" data-board="edexcel">Edexcel</button>
+                    <button class="exam-board" data-board="ocr">OCR</button>
+                    <!--<button class="exam-board" data-board="wjec">WJEC</button>
+                    <button class="exam-board" data-board="eduqas">WJEC Eduqas</button>-->
+                </div>
+        
+                <div class="resources">
+                    <!-- AQA Resources -->
+                    <a href="#" class="tool-card" data-board="aqa">
+                        <div class="icon">📖</div>
+                        <h3>Revision Notes</h3>
+                        <small style="color: red;">[Coming soon]</small>
+                    </a>
+                    <a href="#" class="tool-card" data-board="aqa">
+                        <div class="icon">❓</div>
+                        <h3>Exam Questions</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="aqa">
+                        <div class="icon">🔄</div>
+                        <h3>Past Papers</h3>
+                    </a>
+        
+                    <!-- Edexcel Resources -->
+                    <a href="#" class="tool-card" data-board="edexcel" style="display: none;">
+                        <div class="icon">📖</div>
+                        <h3>Revision Notes</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="edexcel" style="display: none;">
+                        <div class="icon">❓</div>
+                        <h3>Exam Questions</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="edexcel" style="display: none;">
+                        <div class="icon">🔄</div>
+                        <h3>Past Papers</h3>
+                    </a>
+        
+                    <!-- OCR Resources -->
+                    <a href="#" class="tool-card" data-board="ocr" style="display: none;">
+                        <div class="icon">📖</div>
+                        <h3>Revision Notes</h3>
+                        <small style="color: red;">[Coming soon]</small>
+                    </a>
+                    <a href="#" class="tool-card" data-board="ocr" style="display: none;">
+                        <div class="icon">❓</div>
+                        <h3>Exam Questions</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="ocr" style="display: none;">
+                        <div class="icon">🔄</div>
+                        <h3>Past Papers</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Further Maths-->
+        <div class="subject-container" id="further-maths">
+            <h2 class="subject-title">
+                Further Mathematics
+                <button class="toggle-arrow" aria-label="Expand Subject">
+                    <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M6 9l6 6 6-6" stroke="black" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </h2>
+            
+        
+            <div class="subject-content">
+                <p style="text-align: center;">Choose your A Level Exam Board</p>
+                
+                <div class="exam-board-buttons">
+                    <button class="exam-board active" data-board="aqa">AQA</button>
+                    <button class="exam-board" data-board="edexcel">Edexcel</button>
+                    <button class="exam-board" data-board="ocr">OCR</button>
+                    <!--<button class="exam-board" data-board="wjec">WJEC</button>
+                    <button class="exam-board" data-board="eduqas">WJEC Eduqas</button>-->
+                </div>
+        
+                <div class="resources">
+                    <!-- AQA Resources -->
+                    <a href="#" class="tool-card" data-board="aqa">
+                        <div class="icon">📖</div>
+                        <h3>Revision Notes</h3>
+                        <small style="color: red;">[Coming soon]</small>
+                    </a>
+                    <a href="#" class="tool-card" data-board="aqa">
+                        <div class="icon">❓</div>
+                        <h3>Exam Questions</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="aqa">
+                        <div class="icon">🔄</div>
+                        <h3>Past Papers</h3>
+                    </a>
+        
+                    <!-- Edexcel Resources -->
+                    <a href="#" class="tool-card" data-board="edexcel" style="display: none;">
+                        <div class="icon">📖</div>
+                        <h3>Revision Notes</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="edexcel" style="display: none;">
+                        <div class="icon">❓</div>
+                        <h3>Exam Questions</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="edexcel" style="display: none;">
+                        <div class="icon">🔄</div>
+                        <h3>Past Papers</h3>
+                    </a>
+        
+                    <!-- OCR Resources -->
+                    <a href="#" class="tool-card" data-board="ocr" style="display: none;">
+                        <div class="icon">📖</div>
+                        <h3>Revision Notes</h3>
+                        <small style="color: red;">[Coming soon]</small>
+                    </a>
+                    <a href="#" class="tool-card" data-board="ocr" style="display: none;">
+                        <div class="icon">❓</div>
+                        <h3>Exam Questions</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="ocr" style="display: none;">
+                        <div class="icon">🔄</div>
+                        <h3>Past Papers</h3>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="subject-container" id="maths">
-            <h2 class="subject-title">Mathematics</h2>
-            <p>Choose your A Level Exam Board</p>
+        <!-- Computer Science -->
+        <div class="subject-container" id="computer-science">
+            <h2 class="subject-title">
+                Computer Science
+                <button class="toggle-arrow" aria-label="Expand Subject">
+                    <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M6 9l6 6 6-6" stroke="black" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </h2>
             
-            <div class="exam-board-buttons">
-                <button class="exam-board active" data-board="aqa">AQA</button>
-                <button class="exam-board" data-board="edexcel">Edexcel</button>
-                <button class="exam-board" data-board="ocr">OCR</button>
-                <button class="exam-board" data-board="wjec">WJEC</button>
-                <button class="exam-board" data-board="eduqas">WJEC Eduqas</button>
-            </div>
-    
-            <div class="resources">
-                <div class="card" data-board="aqa">
-                    <div class="icon">📖</div>
-                    <h3>Revision Notes</h3>
-                </div>
-                <div class="card" data-board="aqa">
-                    <div class="icon">❓</div>
-                    <h3>Exam Questions</h3>
-                </div>
-                <div class="card" data-board="aqa">
-                    <div class="icon">🔄</div>
-                    <h3>Past Papers</h3>
-                </div>
-    
-                <div class="card" data-board="edexcel" style="display: none;">
-                    <div class="icon">📖</div>
-                    <h3>Revision Notes</h3>
-                </div>
-                <div class="card" data-board="edexcel" style="display: none;">
-                    <div class="icon">❓</div>
-                    <h3>Exam Questions</h3>
-                </div>
-                <div class="card" data-board="edexcel" style="display: none;">
-                    <div class="icon">🔄</div>
-                    <h3>Past Papers</h3>
-                </div>
+        
+            <div class="subject-content">
+                <p style="text-align: center;">Choose your A Level Exam Board</p>
                 
-                <div class="card" data-board="ocr" style="display: none;">
-                    <div class="icon">📖</div>
-                    <h3>Revision Notes</h3>
+                <div class="exam-board-buttons">
+                    <button class="exam-board active" data-board="aqa">AQA</button>
+                    <button class="exam-board" data-board="edexcel">Edexcel</button>
+                    <button class="exam-board" data-board="ocr">OCR</button>
+                    <!--<button class="exam-board" data-board="wjec">WJEC</button>
+                    <button class="exam-board" data-board="eduqas">WJEC Eduqas</button>-->
                 </div>
-                <div class="card" data-board="ocr" style="display: none;">
-                    <div class="icon">❓</div>
-                    <h3>Exam Questions</h3>
-                </div>
-                <div class="card" data-board="ocr" style="display: none;">
-                    <div class="icon">🔄</div>
-                    <h3>Past Papers</h3>
+        
+                <div class="resources">
+                    <!-- AQA Resources -->
+                    <a href="#" class="tool-card" data-board="aqa">
+                        <div class="icon">📖</div>
+                        <h3>Revision Notes</h3>
+                        <small style="color: red;">[Coming soon]</small>
+                    </a>
+                    <a href="#" class="tool-card" data-board="aqa">
+                        <div class="icon">❓</div>
+                        <h3>Exam Questions</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="aqa">
+                        <div class="icon">🔄</div>
+                        <h3>Past Papers</h3>
+                    </a>
+        
+                    <!-- Edexcel Resources -->
+                    <a href="#" class="tool-card" data-board="edexcel" style="display: none;">
+                        <div class="icon">📖</div>
+                        <h3>Revision Notes</h3>
+                        <small style="color: red;">[Coming soon]</small>
+                    </a>
+                    <a href="#" class="tool-card" data-board="edexcel" style="display: none;">
+                        <div class="icon">❓</div>
+                        <h3>Exam Questions</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="edexcel" style="display: none;">
+                        <div class="icon">🔄</div>
+                        <h3>Past Papers</h3>
+                    </a>
+        
+                    <!-- OCR Resources -->
+                    <a href="#" class="tool-card" data-board="ocr" style="display: none;">
+                        <div class="icon">📖</div>
+                        <h3>Revision Notes</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="ocr" style="display: none;">
+                        <div class="icon">❓</div>
+                        <h3>Exam Questions</h3>
+                    </a>
+                    <a href="#" class="tool-card" data-board="ocr" style="display: none;">
+                        <div class="icon">🔄</div>
+                        <h3>Past Papers</h3>
+                    </a>
                 </div>
             </div>
         </div>

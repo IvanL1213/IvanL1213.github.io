@@ -9,23 +9,90 @@ try{
     console.log("Oops! Could not inject footer!");
     
 }
-document.querySelectorAll('.exam-board').forEach(button => {
-    button.addEventListener('click', () => {
-        // Remove 'active' class from all buttons
-        document.querySelectorAll('.exam-board').forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
 
-        // Get the selected exam board
-        let selectedBoard = button.getAttribute('data-board');
+function toggleMenu() {
+    const menu = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+    
+    menu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+}
 
-        // Hide all cards first
-        document.querySelectorAll('.card').forEach(card => {
-            card.style.display = "none";
+// Close the menu when clicking outside
+document.addEventListener('click', function(event) {
+    const menu = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+    const isClickInside = menu.contains(event.target) || hamburger.contains(event.target);
+    
+    if (!isClickInside && menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        hamburger.classList.remove('active');
+    }
+});
+
+// Close dropdown when clicking a link
+document.querySelectorAll('.nav-links .nav-item').forEach(item => {
+    if (!item.querySelector('.dropdown')) {
+        item.addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.remove('active');
+            document.querySelector('.hamburger').classList.remove('active');
         });
+    }
+});
 
-        // Show only the cards that match the selected exam board
-        document.querySelectorAll(`.card[data-board="${selectedBoard}"]`).forEach(card => {
-            card.style.display = "block";
+document.addEventListener("DOMContentLoaded", function () {
+    // COLLAPSE LOGIC
+    document.querySelectorAll(".subject-container").forEach(container => {
+        const toggleBtn = container.querySelector(".toggle-arrow");
+
+        toggleBtn.addEventListener("click", () => {
+            // Collapse others
+            document.querySelectorAll(".subject-container").forEach(subject => {
+                if (subject !== container) {
+                    subject.classList.remove("active");
+                }
+            });
+
+            // Toggle current
+            container.classList.toggle("active");
         });
     });
+
+    // EXAM BOARD LOGIC
+    document.querySelectorAll(".exam-board").forEach(button => {
+        button.addEventListener("click", function () {
+            const selectedBoard = this.dataset.board;
+            const subjectContainer = this.closest(".subject-container");
+
+            // Deactivate all buttons in this subject
+            subjectContainer.querySelectorAll(".exam-board").forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            // Activate clicked one
+            this.classList.add("active");
+
+            // Hide all tool cards
+            subjectContainer.querySelectorAll(".tool-card").forEach(card => {
+                card.style.display = "none";
+            });
+
+            // Show only matching board tool cards
+            subjectContainer.querySelectorAll(`.tool-card[data-board="${selectedBoard}"]`).forEach(card => {
+                card.style.display = "inline-block";
+            });
+        });
+    });
+
+    // INIT: Show active board’s resources
+    document.querySelectorAll(".subject-container").forEach(subject => {
+        const activeBtn = subject.querySelector(".exam-board.active");
+        if (activeBtn) {
+            const board = activeBtn.dataset.board;
+            subject.querySelectorAll(`.tool-card[data-board="${board}"]`).forEach(card => {
+                card.style.display = "inline-block";
+            });
+        }
+    });
 });
+
